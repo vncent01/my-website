@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movie143</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin: 0;">Movie<span id="title">143</span></h1>
+        <input type="text" id="search-input" placeholder="Search movies, TV shows, anime..." oninput="searchTMDB()" />
+    </header>
+
+    <section id="search-section">
+        <h2>Search Results</h2>
+        <div id="search-results"></div>
+    </section>
+
+
+    <div id="banner">
+        <div id="banner-title"></div>
+    </div>
+
+    <section>
+        <h2>Trending Movies</h2>
+        <div id="movies-list"></div>
+    </section>
+
+    <section>
+        <h2>Trending TV Shows</h2>
+        <div id="tvshows-list"></div>
+    </section>
+
+    <section>
+        <h2>Trending Anime (Japanese)</h2>
+        <div id="anime-list"></div>
+    </section>
+
+    <!-- Modal for details and video -->
+    <div id="modal">
+        <div id="modal-content">
+        <div id="modal-header">
+            <h2 id="modal-title"></h2>
+            <span id="modal-close" onclick="closeModal()">×</span>
+        </div>
+        <div id="modal-body">
+            <img id="modal-image" src="" alt="Poster" />
+            <div id="modal-details">
+            <div id="modal-rating"></div>
+            <div id="modal-overview"></div>
+            <select id="server" onchange="changeServer()">
+                <option value="vidsrc.cc">vidsrc.cc</option>
+                <option value="vidsrc.me">vidsrc.me</option>
+                <option value="player.videasy.net">player.videasy.net</option>
+            </select>
+            <iframe id="modal-video" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
